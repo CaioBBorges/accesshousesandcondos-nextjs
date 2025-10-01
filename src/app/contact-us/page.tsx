@@ -74,10 +74,9 @@ export default function ContactUsPage() {
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
               Contact Us
             </h1>
-            <p className="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto">
-              Ready to find your dream home? Let's start the conversation today.
-            </p>
-          </motion.div>
+                          <p className="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto">
+                            Ready to find your dream home? Let&apos;s start the conversation today.
+                          </p>          </motion.div>
         </div>
       </section>
 
