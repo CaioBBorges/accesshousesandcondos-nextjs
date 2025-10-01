@@ -17,6 +17,7 @@ const ContactForm = () => {
     fetch('/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       body: new URLSearchParams(formData as any).toString(),
     })
       .then(() => setSubmitStatus('success'))
