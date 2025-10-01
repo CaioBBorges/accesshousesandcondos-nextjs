@@ -82,7 +82,7 @@ export default function Home() {
                   </svg>
                 </div>
                 <h3 className="text-xl font-semibold mb-2">Premium Locations</h3>
-                <p className="text-gray-600">Strategically located in Southern Ontario's most desirable neighborhoods</p>
+                <p className="text-gray-600">Strategically located in Southern Ontario&apos;s most desirable neighborhoods</p>
               </div>
               <div className="text-center">
                 <div className="bg-[#3078e4] w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">

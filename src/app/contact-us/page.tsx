@@ -184,8 +184,8 @@ export default function ContactUsPage() {
               Ready to Start Your Home Journey?
             </h2>
             <p className="text-lg text-blue-100 mb-8 max-w-2xl mx-auto">
-              Don't wait - the best pre-construction opportunities move quickly. 
-              Contact us today to secure your spot in Southern Ontario's most desirable developments.
+              Don&apos;t wait - the best pre-construction opportunities move quickly. 
+              Contact us today to secure your spot in Southern Ontario&apos;s most desirable developments.
             </p>
             <motion.a
               href="mailto:info@accesshousesandcondos.com"
@@ -197,6 +197,11 @@ export default function ContactUsPage() {
             </motion.a>
           </motion.div>
         </div>
+      </section>
+    </div>
+  );
+}
+
       </section>
     </div>
   );
