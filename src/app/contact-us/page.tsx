@@ -201,8 +201,3 @@ export default function ContactUsPage() {
     </div>
   );
 }
-
-      </section>
-    </div>
-  );
-}
