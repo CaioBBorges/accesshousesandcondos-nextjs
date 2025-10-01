@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import { ArrowLeft } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
 import styles from './the-clove.module.css';
 
 const project = {
@@ -73,7 +74,7 @@ export default function TheClovePage() {
                 <h1 className="text-4xl md:text-5xl font-bold text-white">{project.title}</h1>
                 <p className="text-lg md:text-xl text-blue-400 font-semibold mt-2">{project.status}</p>
               </div>
-              <img src={project.image} alt={project.title} className="w-full h-auto object-cover rounded-xl shadow-2xl max-h-[600px]" />
+              <Image src={project.image} alt={project.title} width={1200} height={600} className="w-full h-auto object-cover rounded-xl shadow-2xl max-h-[600px]" />
             </motion.div>
           </div>
         </section>
@@ -114,7 +115,7 @@ export default function TheClovePage() {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
             >
-              <img src="/uploads/2024/09/the-clove-why-1024x853.jpeg" alt="Why The Clove" className="w-full h-auto object-cover rounded-xl shadow-lg" />
+              <Image src="/uploads/2024/09/the-clove-why-1024x853.jpeg" alt="Why The Clove" width={1024} height={853} className="w-full h-auto object-cover rounded-xl shadow-lg" />
             </motion.div>
           </div>
         </section>
@@ -122,10 +123,10 @@ export default function TheClovePage() {
         <section className={`py-16 ${styles.wpBlockGallery}`}>
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <img src="/uploads/2024/09/the-clove-gallery-image-3-1024x575.jpeg" alt="Gallery 1" className="w-full h-auto object-cover rounded-lg"/>
-                    <img src="/uploads/2024/09/the-clove-gallery-image-2-1024x575.jpeg" alt="Gallery 2" className="w-full h-auto object-cover rounded-lg"/>
-                    <img src="/uploads/2024/09/the-clove-gallery-image-3-1-1024x575.jpeg" alt="Gallery 3" className="w-full h-auto object-cover rounded-lg"/>
-                    <img src="/uploads/2024/09/the-clove-gallery-image-1024x575.jpeg" alt="Gallery 4" className="w-full h-auto object-cover rounded-lg"/>
+                    <Image src="/uploads/2024/09/the-clove-gallery-image-3-1024x575.jpeg" alt="Gallery 1" width={1024} height={575} className="w-full h-auto object-cover rounded-lg"/>
+                    <Image src="/uploads/2024/09/the-clove-gallery-image-2-1024x575.jpeg" alt="Gallery 2" width={1024} height={575} className="w-full h-auto object-cover rounded-lg"/>
+                    <Image src="/uploads/2024/09/the-clove-gallery-image-3-1-1024x575.jpeg" alt="Gallery 3" width={1024} height={575} className="w-full h-auto object-cover rounded-lg"/>
+                    <Image src="/uploads/2024/09/the-clove-gallery-image-1024x575.jpeg" alt="Gallery 4" width={1024} height={575} className="w-full h-auto object-cover rounded-lg"/>
                 </div>
             </div>
         </section>
@@ -188,7 +189,7 @@ export default function TheClovePage() {
             <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
                 <h2 className={`text-3xl font-bold text-gray-900 mb-6 ${styles.hasTextAlignCenter}`}>The Developer</h2>
                 <div className="flex justify-center mb-8">
-                    <img src="/uploads/2024/09/00229fde-6f98-4ff4-917a-a8499de47047-removebg-preview-e1725744996612.png" alt="Mattamy Homes"/>
+                    <Image src="/uploads/2024/09/00229fde-6f98-4ff4-917a-a8499de47047-removebg-preview-e1725744996612.png" alt="Mattamy Homes" width={300} height={100} />
                 </div>
                 <p className="text-lg text-gray-600">{project.developer}</p>
                 <ul className="space-y-2 mt-4">

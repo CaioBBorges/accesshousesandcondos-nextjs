@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 import styles from './about.module.css';
 
@@ -21,11 +22,11 @@ const About = () => {
         <div className={styles.grid}>
           <motion.div
             initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             className={styles.imageContainer}
           >
-            <img src="https://accesshousesandcondos.local/wp-content/uploads/2024/08/lucy-300x296.png" alt="Lucy Tejkowsky" className={styles.image} />
+            <Image src="https://accesshousesandcondos.local/wp-content/uploads/2024/08/lucy-300x296.png" alt="Lucy Tejkowsky" width={300} height={296} className={styles.image} />
           </motion.div>
           <motion.div
             initial={{ opacity: 0, x: 50 }}

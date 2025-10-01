@@ -4,6 +4,7 @@ import HeroSlider from "../components/HeroSlider";
 import ProjectCard from "../components/ProjectCard";
 import ContactForm from "../components/ContactForm";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 export default function Home() {
   const projects = [
@@ -116,7 +117,7 @@ export default function Home() {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <img src="/uploads/2024/08/lucy.png" alt="Lucy" className="rounded-lg shadow-lg" />
+              <Image src="/uploads/2024/08/lucy.png" alt="Lucy" width={400} height={400} className="rounded-lg shadow-lg" />
             </motion.div>
             <motion.div
               initial={{ opacity: 0, x: 50 }}

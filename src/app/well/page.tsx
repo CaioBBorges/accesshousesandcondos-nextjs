@@ -4,6 +4,7 @@
 import { motion } from 'framer-motion';
 import { ArrowLeft } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
 import styles from './well.module.css';
 
 const project = {
@@ -52,7 +53,7 @@ export default function WellPage() {
                 <h1 className="text-4xl md:text-5xl font-bold text-white">{project.title}</h1>
                 <p className="text-lg md:text-xl text-blue-400 font-semibold mt-2">{project.status}</p>
               </div>
-              <img src={project.image} alt={project.title} className="w-full h-auto object-cover rounded-xl shadow-2xl max-h-[600px]" />
+              <Image src={project.image} alt={project.title} width={1200} height={600} className="w-full h-auto object-cover rounded-xl shadow-2xl max-h-[600px]" />
             </motion.div>
           </div>
         </section>
@@ -93,7 +94,7 @@ export default function WellPage() {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
             >
-              <img src="/uploads/2024/09/well-why.jpeg" alt="Why The Well" className="w-full h-auto object-cover rounded-xl shadow-lg" />
+              <Image src="/uploads/2024/09/well-why.jpeg" alt="Why The Well" width={800} height={600} className="w-full h-auto object-cover rounded-xl shadow-lg" />
             </motion.div>
           </div>
         </section>
@@ -115,10 +116,10 @@ export default function WellPage() {
         <section className={`py-16 ${styles.wpBlockGallery}`}>
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <img src="/uploads/2024/09/well-gallery-1.jpeg" alt="Gallery 1" className="w-full h-auto object-cover rounded-lg"/>
-                    <img src="/uploads/2024/09/well-gallery-2-1024x607.jpeg" alt="Gallery 2" className="w-full h-auto object-cover rounded-lg"/>
-                    <img src="/uploads/2024/09/well-gallery-3.jpeg" alt="Gallery 3" className="w-full h-auto object-cover rounded-lg"/>
-                    <img src="/uploads/2024/09/well-gallery-4-1024x775.jpeg" alt="Gallery 4" className="w-full h-auto object-cover rounded-lg"/>
+                    <Image src="/uploads/2024/09/well-gallery-1.jpeg" alt="Gallery 1" width={800} height={600} className="w-full h-auto object-cover rounded-lg"/>
+                    <Image src="/uploads/2024/09/well-gallery-2-1024x607.jpeg" alt="Gallery 2" width={1024} height={607} className="w-full h-auto object-cover rounded-lg"/>
+                    <Image src="/uploads/2024/09/well-gallery-3.jpeg" alt="Gallery 3" width={800} height={600} className="w-full h-auto object-cover rounded-lg"/>
+                    <Image src="/uploads/2024/09/well-gallery-4-1024x775.jpeg" alt="Gallery 4" width={1024} height={775} className="w-full h-auto object-cover rounded-lg"/>
                 </div>
             </div>
         </section>
