@@ -1,9 +1,28 @@
 'use client';
 
+import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Send, Mail, Phone, MapPin } from 'lucide-react';
+import { Send, Mail, Phone, MapPin, AlertTriangle, CheckCircle } from 'lucide-react';
 
 const ContactForm = () => {
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const myForm = e.currentTarget;
+    const formData = new FormData(myForm);
+
+    setSubmitStatus('submitting');
+
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams(formData as any).toString(),
+    })
+      .then(() => setSubmitStatus('success'))
+      .catch(() => setSubmitStatus('error'));
+  };
+
   return (
     <section className="py-16 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -76,7 +95,7 @@ const ContactForm = () => {
             transition={{ duration: 0.6 }}
             className="bg-white p-8 rounded-lg shadow-lg"
           >
-            <form name="contact" method="POST" data-netlify="true" className="space-y-6">
+            <form name="contact" data-netlify="true" onSubmit={handleSubmit} className="space-y-6">
               <input type="hidden" name="form-name" value="contact" />
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
@@ -133,15 +152,46 @@ const ContactForm = () => {
                 />
               </div>
 
-              <motion.button
-                type="submit"
-                className="w-full bg-[#3078e4] hover:bg-blue-600 text-white font-semibold py-3 px-6 rounded-lg transition-colors flex items-center justify-center space-x-2"
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-              >
-                <Send className="w-5 h-5" />
-                <span>Send Message</span>
-              </motion.button>
+              {submitStatus === 'idle' || submitStatus === 'submitting' ? (
+                <motion.button
+                  type="submit"
+                  disabled={submitStatus === 'submitting'}
+                  className="w-full bg-[#3078e4] hover:bg-blue-600 text-white font-semibold py-3 px-6 rounded-lg transition-colors flex items-center justify-center space-x-2 disabled:opacity-50 disabled:cursor-not-allowed"
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
+                >
+                  {submitStatus === 'submitting' ? (
+                    <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white" />
+                  ) : (
+                    <>
+                      <Send className="w-5 h-5" />
+                      <span>Send Message</span>
+                    </>
+                  )}
+                </motion.button>
+              ) : null}
+
+              {submitStatus === 'success' && (
+                <motion.div
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  className="text-green-600 bg-green-50 p-4 rounded-lg text-center font-medium flex items-center justify-center"
+                >
+                  <CheckCircle className="w-5 h-5 mr-2" />
+                  Thank you! Your message has been sent.
+                </motion.div>
+              )}
+
+              {submitStatus === 'error' && (
+                <motion.div
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  className="text-red-600 bg-red-50 p-4 rounded-lg text-center font-medium flex items-center justify-center"
+                >
+                  <AlertTriangle className="w-5 h-5 mr-2" />
+                  Something went wrong. Please try again.
+                </motion.div>
+              )}
             </form>
           </motion.div>
         </div>
