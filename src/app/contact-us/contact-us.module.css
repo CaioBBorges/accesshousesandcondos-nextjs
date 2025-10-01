@@ -1,0 +1,11 @@
+.wp-block-group.alignfull {
+    background-color: #283add;
+}
+
+.contact_name,
+.contact_email,
+.contact_message {
+    border-radius: 5px;
+    border-width: 30px;
+    border: 3px solid #bbb;
+}

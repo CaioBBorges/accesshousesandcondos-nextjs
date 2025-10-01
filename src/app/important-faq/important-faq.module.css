@@ -1,0 +1,16 @@
+.wp-block-group.alignfull {
+    background-color: #283add;
+}
+
+.wp-block-gutena-accordion-panel-title-inner h6 {
+    color: #3078e4;
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+}
+
+.wp-block-gutena-accordion-panel-content-inner p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
