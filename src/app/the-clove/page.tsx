@@ -63,7 +63,7 @@ export default function TheClovePage() {
       </header>
 
       <main>
-        <section className={`${styles.wpBlockGroup} ${styles.alignfull} py-12`}>
+        <section className={`${styles.wpBlockGroup} ${styles.alignfull} py-12 overflow-x-hidden`}>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -79,7 +79,7 @@ export default function TheClovePage() {
           </div>
         </section>
 
-        <section className="py-16">
+        <section className="py-16 overflow-x-hidden">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -93,7 +93,7 @@ export default function TheClovePage() {
           </div>
         </section>
 
-        <section className="py-16 bg-white">
+        <section className="py-16 bg-white overflow-x-hidden">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 gap-12">
             <motion.div
               initial={{ opacity: 0, x: -50 }}
@@ -120,7 +120,7 @@ export default function TheClovePage() {
           </div>
         </section>
 
-        <section className={`py-16 ${styles.wpBlockGallery}`}>
+        <section className={`py-16 ${styles.wpBlockGallery} overflow-x-hidden`}>
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <Image src="/uploads/2024/09/the-clove-gallery-image-3-1024x575.jpeg" alt="Gallery 1" width={1024} height={575} className="w-full h-auto object-cover rounded-lg"/>
@@ -131,7 +131,7 @@ export default function TheClovePage() {
             </div>
         </section>
 
-        <section className="py-16 bg-white">
+        <section className="py-16 bg-white overflow-x-hidden">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 gap-12">
             <motion.div
               initial={{ opacity: 0, x: -50 }}
@@ -185,7 +185,7 @@ export default function TheClovePage() {
           </div>
         </section>
 
-        <section className="py-16">
+        <section className="py-16 overflow-x-hidden">
             <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
                 <h2 className={`text-3xl font-bold text-gray-900 mb-6 ${styles.hasTextAlignCenter}`}>The Developer</h2>
                 <div className="flex justify-center mb-8">
@@ -203,7 +203,7 @@ export default function TheClovePage() {
             </div>
         </section>
 
-        <section className="py-16 bg-white">
+        <section className="py-16 bg-white overflow-x-hidden">
             <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
