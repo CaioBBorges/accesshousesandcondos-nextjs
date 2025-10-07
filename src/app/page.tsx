@@ -2,7 +2,6 @@
 
 import HeroSlider from "../components/HeroSlider";
 import ProjectCard from "../components/ProjectCard";
-import ContactForm from "../components/ContactForm";
 import Accordion from "../components/Accordion";
 import { motion } from "framer-motion";
 import Image from "next/image";
@@ -105,16 +104,10 @@ export default function Home() {
       </section>
 
       {/* Image Section */}
-      <section className="py-16 bg-white">
-        <div className="max-w-full mx-auto">
-          <Image
-            src="/uploads/2024/08/section-3.png"
-            alt=""
-            width={1440}
-            height={894}
-            className="w-full h-auto"
-          />
-        </div>
+      <section className="relative h-96 bg-cover bg-center bg-no-repeat my-16"
+        style={{ backgroundImage: `url(/uploads/2024/08/section-3.png)` }}
+      >
+        <div className="absolute inset-0 bg-black opacity-20"></div>
       </section>
 
       {/* About Us Section */}
@@ -126,7 +119,7 @@ export default function Home() {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <Image src="/uploads/2024/08/lucy.png" alt="Lucy" width={400} height={400} className="rounded-lg shadow-lg" />
+              <Image src="/uploads/2024/08/lucy.png" alt="Lucy" width={400} height={400} className="rounded-lg shadow-lg mx-auto" />
             </motion.div>
             <motion.div
               initial={{ opacity: 0, x: 50 }}
@@ -144,9 +137,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      {/* Contact Section */}
-      <ContactForm />
 
       {/* FAQ Section */}
       <section className="py-16 bg-gray-50">

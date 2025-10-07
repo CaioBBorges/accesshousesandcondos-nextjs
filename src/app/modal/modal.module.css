@@ -1,0 +1,20 @@
+.wp-block-group.alignfull {
+    background-color: #000000e0;
+}
+
+.wp-block-navigation {
+    color: #c99b1c;
+}
+
+.wp-block-columns {
+    /* Add your wp-block-columns styles here */
+}
+
+.wp-block-column {
+    flex-basis: 100%;
+}
+
+.wp-block-image img {
+    max-width: 100%;
+    height: auto;
+}
