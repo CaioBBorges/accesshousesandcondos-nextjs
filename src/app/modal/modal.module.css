@@ -1,5 +1,7 @@
 .wp-block-group.alignfull {
-    background-color: #000000e0;
+    background: linear-gradient(135deg, #000000e0, #1a1a1ae0);
+    padding: 4rem 2rem;
+    margin-bottom: 2rem;
 }
 
 .wp-block-navigation {
@@ -7,7 +9,15 @@
 }
 
 .wp-block-columns {
-    /* Add your wp-block-columns styles here */
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+    .wp-block-columns {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 .wp-block-column {
@@ -17,4 +27,17 @@
 .wp-block-image img {
     max-width: 100%;
     height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.wp-block-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.has-text-align-center {
+    text-align: center;
 }

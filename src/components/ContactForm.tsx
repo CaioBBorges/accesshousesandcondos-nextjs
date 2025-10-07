@@ -79,12 +79,17 @@ const ContactForm = () => {
             <form
               name="contact"
               method="POST"
+              action="/"
               data-netlify="true"
               data-netlify-honeypot="bot-field"
               className="space-y-6"
             >
               <input type="hidden" name="form-name" value="contact" />
-              <input type="hidden" name="bot-field" />
+              <p className="hidden">
+                <label>
+                  Don&apos;t fill this out if you&apos;re human: <input name="bot-field" />
+                </label>
+              </p>
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
                   Full Name *

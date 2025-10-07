@@ -36,8 +36,7 @@ const AboutPage = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className={styles.imageContainer}
           >
-            {/* Placeholder image */}
-            <Image src="https://via.placeholder.com/300" alt="Lucy Tejkowsky" width={300} height={300} className={styles.image} />
+            <Image src="/uploads/2024/08/lucy.png" alt="Lucy Tejkowsky" width={400} height={400} className={styles.image} />
           </motion.div>
           <motion.div
             initial={{ opacity: 0, x: 50 }}
