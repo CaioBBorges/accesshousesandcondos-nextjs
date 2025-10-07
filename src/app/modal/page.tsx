@@ -164,10 +164,10 @@ export default function ModalPage() {
         <section className={`py-16 ${styles.wpBlockGallery}`}>
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <Image src={project.image} alt="Gallery 1" width={1024} height={576} className="w-full h-auto object-cover rounded-lg"/>
-                    <Image src={project.image} alt="Gallery 2" width={1024} height={529} className="w-full h-auto object-cover rounded-lg"/>
-                    <Image src={project.image} alt="Gallery 3" width={1024} height={576} className="w-full h-auto object-cover rounded-lg"/>
-                    <Image src={project.image} alt="Gallery 4" width={1024} height={682} className="w-full h-auto object-cover rounded-lg"/>
+                    <Image src={"/uploads/2024/09/image-1.png"} alt="Gallery 1" width={1024} height={576} className="w-full h-auto object-cover rounded-lg"/>
+                    <Image src={"/uploads/2024/09/image-2.png"} alt="Gallery 2" width={1024} height={529} className="w-full h-auto object-cover rounded-lg"/>
+                    <Image src={"/uploads/2024/09/image-3.png"} alt="Gallery 3" width={1024} height={576} className="w-full h-auto object-cover rounded-lg"/>
+                    <Image src={"/uploads/2024/09/image-4.png"} alt="Gallery 4" width={1024} height={682} className="w-full h-auto object-cover rounded-lg"/>
                 </div>
             </div>
         </section>
